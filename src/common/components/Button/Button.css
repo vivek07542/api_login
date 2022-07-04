@@ -1,0 +1,14 @@
+.buttonFeature {
+      background-color: rgb(227, 120, 47);
+      color: white;
+}
+.buttonFeature:hover {
+      background-color: white;
+      color: rgb(227, 120, 47);
+      box-shadow: 0.5px 0.5px 3px grey;
+      border: 1px solid rgb(227, 120, 47);
+}
+.buttonActive {
+      background-color: rgb(224, 148, 93) !important;
+      border: 1px solid rgb(227, 120, 47);
+}

@@ -1,0 +1,31 @@
+.dropMenu {
+      list-style: none;
+      width: 30%;
+      box-shadow: 0.5px 0.5px 3px grey;
+      border: 1px solid lightgray;
+      background-color: white;
+      color: rgb(96, 102, 132);
+      font-size: 16px;
+      padding: 0;
+      z-index: 100;
+      position: absolute;
+}
+.dropList {
+      padding: 3px 0 3px 10px;
+}
+.dropList:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: black;
+}
+.dropListSearch {
+      padding: 3px 0 3px 10px;
+      font-size: 8px;
+}
+.eachDetailSection {
+      height: 100px;
+      padding: 0 0 0 8px !important;
+}
+.search-by-filter-container {
+      height: 120px;
+      /* border: 1px solid lightgray; */
+}

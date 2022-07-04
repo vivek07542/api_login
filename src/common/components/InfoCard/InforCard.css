@@ -1,0 +1,17 @@
+.card-container {
+      list-style: none;
+      width: 30%;
+      box-shadow: 0.5px 0.5px 3px grey;
+      border: 1px solid lightgray;
+      background-color: white;
+      color: black;
+      font-size: 8px;
+      padding: 0;
+      z-index: 100;
+      position: absolute;
+      margin: 0 0 0 15px;
+}
+.closeTag {
+      font-size: 15px;
+}
+/* rgb(96, 102, 132) */

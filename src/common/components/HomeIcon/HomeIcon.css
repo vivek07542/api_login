@@ -1,0 +1,127 @@
+.draggable-container-unselected {
+      width: 40px;
+      /* height: 60px; */
+      /* box-shadow: 1px 1px 2px grey; */
+      margin: 5px auto;
+      position: relative;
+}
+.draggable-container {
+      width: 38px;
+      /* height: 60px; */
+      /* box-shadow: 1px 1px 2px grey; */
+      margin: 0px auto;
+      position: relative;
+}
+.draggable {
+      width: 35px;
+      height: 35px;
+      margin: 1px auto;
+      line-height: 1.25em;
+      font-size: 22px;
+      text-align: center;
+      color: white;
+}
+.draggable-unselected-container {
+      height: 60px;
+}
+.draggable-selected-container {
+      height: 60px;
+}
+.draggable-square {
+      border-radius: 3px;
+}
+.draggable-circle {
+      border-radius: 50%;
+}
+.draggable-diamond {
+      border-radius: 3px;
+      transform: rotate(45deg);
+      margin-bottom: 4px;
+}
+.draggable-diamond .icon-Image {
+      transform: rotate(-45deg);
+      padding-bottom: 3px;
+      padding-right: 1px;
+      /* border: 1px solid red; */
+}
+.draggable-file {
+      /* border-radius: 3px; */
+      background-image: url('../../../assets/Images/shape-page.png');
+      max-width: 100%;
+      max-height: 100%;
+      width: 50px;
+      height: 40px;
+}
+/* .draggable-file:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top: 17px solid white;
+      border-left: 17px solid transparent;
+      width: 0;
+       border-radius: 3px; 
+ } */
+.draggable-file .icon-Image {
+      padding-right: 7px;
+      padding-top: 4px;
+}
+.closeTab-home-icon {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(204, 83, 83, 0.37);
+      z-index: 1;
+      top: -3px;
+      right: -3px;
+}
+.icon-text {
+      font-size: 10px;
+      font-weight: 500;
+      /* border: 1px solid red; */
+      margin: 0 auto;
+      text-align: center;
+}
+.top-line {
+      position: absolute;
+      width: 2px;
+      height: 22px;
+      top: 35px;
+      right: 18px;
+      border-left: 1.5px dashed;
+      text-align: center;
+      margin: 5px auto;
+}
+.right-line {
+      position: absolute;
+      top: 17.5px;
+      right: -45px;
+      width: 35px;
+      height: 2px;
+      border-top: 1.5px dashed;
+}
+.left-line {
+      position: absolute;
+      top: 17.5px;
+      right: 45px;
+      width: 35px;
+      height: 2px;
+      border-top: 1.5px dashed;
+}
+.left-bottom-line {
+      position: absolute;
+      top: 17.5px;
+      right: 79px;
+      width: 2px;
+      height: 46px;
+      border-left: 1.5px dashed;
+}
+.right-bottom-line {
+      position: absolute;
+      top: 17.5px;
+      right: -46px;
+      width: 2px;
+      height: 46px;
+      border-left: 1.5px dashed;
+}

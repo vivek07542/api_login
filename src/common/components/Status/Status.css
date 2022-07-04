@@ -1,0 +1,29 @@
+.status-container {
+      margin: 0 auto;
+      max-width: 120px;
+      height: 30px;
+      padding-top: 5px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 10px;
+}
+.status-draft {
+      color: rgb(33, 150, 243);
+      background-color: rgb(193, 228, 253);
+}
+.status-active {
+      color: rgb(33, 213, 155);
+      background-color: rgb(190, 245, 238);
+}
+.status-inactive {
+      color: rgb(227, 120, 47);
+      background-color: rgb(255, 218, 193);
+}
+@media only screen and (max-width: 640px) {
+      .status-container {
+            text-align: center;
+            font-size: 12px;
+            height: 25px;
+            margin: 0;
+      }
+}

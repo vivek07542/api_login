@@ -1,0 +1,8 @@
+.body-side--container {
+      width: 100%;
+      padding: 0 35px;
+      align-items: left;
+      text-align: left;
+      min-height: 87vh;
+      height: auto;
+}

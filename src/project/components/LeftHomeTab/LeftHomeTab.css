@@ -1,0 +1,32 @@
+.leftSide-container-partition{
+    border-right:1px solid lightgray;
+    text-align: center;
+}
+.form-button-container {
+    height:250px;
+    width:150px;
+    /* border:1px solid red; */
+}
+.draft-homeForm {
+    font-size: 13px;
+    font-weight: 500;
+    min-width: 70px;
+    padding: 0 !important;
+    margin: 20px 5px !important;
+}
+.draft-homeForm:hover {
+    border: none;
+}
+.draft-blue-homeForm {
+    background-color: rgb(55, 143, 214) !important;
+    color: white !important;
+}
+.draft-white-homeForm {
+    background-color: white !important;
+    color: rgb(227, 120, 47) !important;
+}
+.draft-green-homeForm {
+    width: 100px;
+    background-color: rgb(41, 172, 41) !important;
+    color: white !important;
+}

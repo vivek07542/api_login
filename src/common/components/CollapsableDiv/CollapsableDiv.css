@@ -1,0 +1,21 @@
+.collapse-container {
+      display: flex;
+      color: rgb(227, 120, 47);
+      font-weight: 600;
+}
+.collapse-container:hover {
+      background-color: whitesmoke;
+}
+.collapsable-text {
+      font-size: 13px;
+}
+.hr-class {
+      border: 1px solid rgb(227, 120, 47);
+}
+.content-collapsable-container {
+      display: flex;
+      width: 60%;
+      margin-left: 70px;
+      padding: 0;
+      justify-content: space-around;
+}

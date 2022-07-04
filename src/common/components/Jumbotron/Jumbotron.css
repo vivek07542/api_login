@@ -1,0 +1,22 @@
+.Jumbotron-container {
+      background-color: rgb(250, 251, 255);
+      border-radius: 10px;
+      height: auto;
+      box-shadow: 0.5px 0.5px 3px grey;
+      padding: 20px 30px;
+      border: 1px solid lightgray;
+      margin: 30px auto 0px !important;
+}
+.jumbotron-heading {
+      font-size: 20px;
+}
+.jumbotron-form-container {
+      height: auto;
+      padding: 0 15px;
+      width: 45%;
+}
+@media screen and (max-width: 600px) {
+      .jumbotron-form-container {
+            width: 100%;
+      }
+}

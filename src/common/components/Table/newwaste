@@ -1,0 +1,159 @@
+/* eslint-disable no-lone-blocks */
+    //         let bodyData = tableData.map((person, index) => {
+    //     return (
+    //         <Tr className="col" key={index}>
+    //             {coloumnConfig.map((detail,ind) => {
+    //                 return (
+    //                     <TdGenerator configuration={detail} key={ind} object={person} />
+    //                 )
+    //             })}
+    //         </Tr>
+    //     )
+    // })
+    //     <>
+                // tableData,headingColumns,addEditButton,addDeleteButton,breakOn,editHandler,deleteHandler,id
+    // const onEditHandler = (rowDetail)=>() =>{
+    //     editHandler(rowDetail);
+    // }
+    // const onDeleteHandler = (rowDetail) => () =>{
+    //     deleteHandler(rowDetail);
+    // }
+       
+             
+
+
+
+               {/* <Thead>
+                <Tr >{coloumnConfig.map((col, index) => (
+                    <Th  key={index}>
+                        <div className="table-thead-container row justify-content-center text-center">
+                            {col.coloumnName}
+                            <div className="thead-button--container">
+                                <button className="table-sort-button" onClick={() => onSortHandler(col.coloumnName, "ascending")}><BiCaretUp /></button>
+                                <button className="table-sort-button" onClick={() => onSortHandler(col.coloumnName, "descending")}><BiCaretDown /></button>
+                            </div>
+                        </div>
+                    </Th>))}
+                </Tr>
+            </Thead> */}
+
+
+                                   {/* <Tbody>
+                    {tableData.map((person, index) => (
+                        <Tr className="col" key={person._id}>
+                            {coloumnConfig.map((detail, ind) => {
+                                let value = detail.dataColoumn;
+                                let data = person[value];
+                                const eachTd = TdGeneratorCondition(detail, data, person);
+                                return (
+                                    <Td key={ind} className={detail.className} data-heading={detail.coloumnName}>{eachTd}</Td>
+                                )
+                            })
+                            }
+                        </Tr>
+                    ))}
+            </Tbody> */}
+                {/* <Tbody>
+                    {
+                        tableData.map((person,index) =>(
+                            <Tr className="col" key={person._id}>
+                                {coloumnConfig.map((detail, ind) => {
+                                    return (
+                                      <TdGenerate configuration={detail} key={person._id} object={person} />
+                                    ) */}
+
+                                        {/* // return (
+                                        //   <TdGenerator configuration={detail} key={ind} object={person} />
+                                        // )
+
+                                        // let value = detail.dataColoumn;
+                                        // let data = person[value];
+                                        // const eachTd = TdGeneratorCondition(detail, data,person);
+                                        // return (
+                                        //     <Td key={ind} className={detail.className} data-heading={detail.coloumnName}>{eachTd}</Td>
+                                        // ) */}
+                                {/* })} */}
+
+
+
+                                {/* <TdGenerator configuration={coloumnConfig[0]} key={index} object={person} /> */}
+                           
+                                {/* <Td className="col-md-2 col-12 text-break " ><p>{person.name}</p></Td> */}
+                                {/* <Td className="col-md-2 col-12" ><p>{person.type}</p></Td>
+                                <Td className="col-md-2 col-12" ><Status>{person.status}</Status></Td>
+                                <Td className="col-md-2 col-12" ><p>{person.enrolmentType}</p></Td>
+                                <Td className="col-md-2 col-12" ><div className="d-flex justify-content-md-around">{person.lastUpdated}<UserIcon className="mx-3 mx-md-0" color="">{person.lastUpdatedBy}</UserIcon></div></Td>
+                                <Td className="col-md-1 col-12" ><UserIcon className="mx-md-auto">{person.owners}</UserIcon></Td>
+                                <Td className="col-md-2 col-12" ><Tags data={person.tags}/></Td>  */}
+                             {/* </Tr>  
+                       )
+
+                    )}
+                </Tbody> */}
+
+//                 import React,{useState} from 'react'
+// import PropTypes from "prop-types";
+// import { Tr } from 'react-super-responsive-table';
+
+// import Ths from "../NewElement/Ths";
+// import Tds from "../NewElement/Tds";
+
+// const Trs = ({ coloumnConfig, onSortHandler, isTableHead, eachTableData }) => {
+//     const [ascActive, isAscActive] = useState({
+//         dataColoumn: "",
+//         active : false
+//     });
+//     const [descActive, isDescActive] = useState({
+//         dataColoumn: "",
+//         active:false
+//     });
+
+//     const activeSortHandler = (col,action) => {
+//         if (action === "asc") {
+//             isAscActive({
+//                 dataColoumn: col,
+//                 active : true
+//             })
+//         }
+//         else if (action === "desc") {
+//             isDescActive({
+//                 dataColoumn: col,
+//                 active : true
+//             })
+//         }
+        
+//     };
+//     let generateTd = coloumnConfig.map((col, index) => (
+//         isTableHead ?
+//             <Ths key={index} eachColoumnConfig={col} isAscActive={ascActive} isDescActive={descActive} onSortHandler={(col, action) => { onSortHandler(col, action); activeSortHandler(col,action); }}/>
+//         :
+//              <Tds key={index} eachColoumnConfig={ col}  eachTableData={eachTableData}/>
+//         ))
+        
+//     return (
+        
+//         <Tr className="col">
+//             {generateTd}
+//         </Tr>
+            
+//     )
+// }
+// Trs.propTypes = {
+//     /**
+//      * Will Define the Weather Thead is there or not
+//      */
+//     isTableHead: PropTypes.bool,
+//    /**
+//    *  Object written from the array of object tableData from backend which is being breakdown into each element and used in table As A tbody Values
+//    */
+//     eachTableData: PropTypes.object,
+//    /**
+//    * Array Of Object written from the config file of each component which is being breakdown and used in table As A thead Values
+//    */
+//     coloumnConfig: PropTypes.arrayOf(PropTypes.object),
+//     /**
+//      * Sort Handler on Table Function which shall be written on every handler funciton and return coloum Head Value and asc/desc
+//      */
+//     onSortHandler:PropTypes.func
+// }
+// export default Trs

@@ -1,0 +1,88 @@
+.right-container {
+      width: 40%;
+      border: 1px solid red;
+      height: 50vh;
+}
+.form-container {
+      /* position: absolute; */
+      /* width: 35%; */
+      height: 92%;
+      margin: 20px 0;
+}
+.form-side-container {
+      width: 12%;
+      height: 100%;
+      background-color: rgba(245, 245, 245, 0.979);
+      justify-content: end;
+}
+.form-heading-div {
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid gray;
+}
+.form-heading-text {
+      height: 50px;
+      padding: 10px;
+      font-size: 17px;
+      font-weight: 450;
+}
+.form-button-container {
+      height:250px;
+      border:1px solid red;
+}
+.draft-homeForm {
+      font-size: 13px;
+      font-weight: 500;
+      min-width: 70px;
+      padding: 0 !important;
+      margin: 0 5px;
+}
+.draft-homeForm:hover {
+      border: none;
+}
+.draft-blue-homeForm {
+      background-color: rgb(55, 143, 214) !important;
+      color: white !important;
+}
+.draft-white-homeForm {
+      background-color: white !important;
+      color: rgb(227, 120, 47) !important;
+}
+.draft-green-homeForm {
+      width: 100px;
+      background-color: rgb(41, 172, 41) !important;
+      color: white !important;
+}
+.sideNav {
+      box-shadow: 1px 1px 4px grey;
+}
+.font-text {
+      font-size: 13px;
+}
+.closebtn {
+      position: absolute;
+      top: 80px;
+      right: 70px;
+      font-size: 18px;
+      margin-left: 50px;
+      color: black;
+}
+.input-form-homeIcon-container {
+      /* border: 1px solid red; */
+}
+/* .modalContainer {
+      width: 800px;
+} */
+.modalDiv {
+      width: 80% !important;
+}
+.output-container {
+      width: 92%;
+      margin: 5px auto;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+}
+.output-container * {
+      margin-top: 5px;
+}

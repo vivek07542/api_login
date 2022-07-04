@@ -1,0 +1,58 @@
+.tag-container {
+      width: auto;
+      min-width: 80px;
+      padding: 3px;
+      box-shadow: 2px 2px 4px darkgray;
+      color: black;
+      background-color: white;
+      border-radius: 25px;
+      margin: 0 8px 3px 0;
+      font-size: 8px;
+      font-weight: 700;
+      text-align: center;
+      position: relative;
+}
+.tags-wrapper {
+      display: flex;
+      width: 100%;
+}
+.tag-display {
+      max-width: 100% !important;
+}
+.close-tag {
+      position: absolute;
+      top: -1px;
+      right: 5px;
+      width: 13px;
+      height: 13px;
+      color: black;
+      background-color: white;
+      font-size: 13px;
+}
+.check-click {
+      /* background-color: ; */
+      color: rgb(33, 150, 243);
+      font-size: 13px;
+}
+.info-tag {
+      /* background-color: rgb(33, 150, 243); */
+
+      color: rgb(33, 150, 243);
+      font-size: 13px;
+}
+.closeTag {
+      font-size: 13px;
+      font-weight: 500;
+}
+.tags-wrap {
+      display: flex;
+}
+@media only screen and (max-width: 645px) {
+      .tags-wrapper {
+            display: block;
+      }
+
+      .tag-container {
+            text-align: center;
+      }
+}

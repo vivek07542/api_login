@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+import './App.css';
+import Routing from './IXH/pages/routes';
+import ErrorBoundary from "./common/components/ErrorBoundary/ErrorBoundary";
+function App() {
+  return (
+    <div className="App">
+      <ErrorBoundary>
+          <Routing/>
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+      </ErrorBoundary>
+    </div>
+  );
+}
+
+export default App;

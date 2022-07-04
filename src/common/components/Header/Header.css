@@ -1,0 +1,77 @@
+.header-container--size {
+      width: 100%;
+      height: 50px;
+      box-shadow: 1px 1px 3px grey;
+}
+.header-search--container {
+      padding-top: 0px;
+      width: 500px;
+      height: 40px;
+      /* border: 1px solid red; */
+}
+.dropdown-toggle::after {
+      color: rgb(227, 120, 47);
+      font-size: 13px;
+}
+.container {
+      margin-top: 5%;
+}
+/* Style to create scroll bar in dropdown */
+.scrollable-dropdown {
+      height: auto;
+      max-height: 320px; /* Increase / Decrease value as per your need */
+      overflow-x: hidden;
+}
+.search-button--color {
+      color: rgb(227, 120, 47) !important;
+      background-color: white !important;
+      border-top-right-radius: 25px !important;
+      border-bottom-right-radius: 25px !important;
+}
+.header-search--input {
+      outline: none;
+      border: none;
+      width: 100%;
+}
+.header-search--input:focus {
+      outline: none;
+}
+.header-search--shape {
+      border-radius: 25px;
+      border: 1px solid lightgrey;
+}
+.header-search--selector {
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-right: 1px solid lightgrey;
+}
+.header-create-shape {
+      border-radius: 25px;
+      height: 40px;
+      padding: 0 !important;
+      border-top-left-radius: 25px !important;
+      border-bottom-left-radius: 25px !important;
+      width: 120px;
+}
+.header-create-shape:hover {
+      color: rgb(227, 120, 47) !important;
+}
+.header-toggler-shape {
+      width: 30px;
+      border-top-right-radius: 25px;
+      border-bottom-right-radius: 25px;
+      border-left: 1px solid lightgrey;
+}
+.header-toggler-shape::after {
+      color: white;
+}
+.header-toggler-shape:hover::after {
+      color: rgb(227, 120, 47) !important;
+}
+.caret-container {
+      width: 20px;
+      padding-top: 3px;
+      margin-left: 20px;
+      height: 40px;
+      color: rgb(227, 120, 47);
+}
