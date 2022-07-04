@@ -1,20 +1,21 @@
 import React from 'react';
-import { Table, Thead, Tbody, Th, Td, Tr } from 'react-super-responsive-table';
+// import { Table, Thead, Tbody, Th, Td, Tr } from 'react-super-responsive-table';
+import { Table } from 'react-super-responsive-table';
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import PropTypes from 'prop-types';
 import './Table.css';
 
-import UserIcon from '../UserIcon/UserIcon';
-import Tags from '../Tags/Tags';
-import Status from '../Status/Status';
-import { BiCaretUp, BiCaretDown } from 'react-icons/bi';
+// import UserIcon from '../UserIcon/UserIcon';
+// import Tags from '../Tags/Tags';
+// import Status from '../Status/Status';
+// import { BiCaretUp, BiCaretDown } from 'react-icons/bi';
 
 import Theads from './Element/Theads';
 import Tbodys from './Element/Tbodys';
 
 /** Common Table Feature for the Major Pages */
 
-const Tables = ({ tableData, coloumnConfig, breakOn, onSortHandler ,onEditHandler,onDeleteHandler}) => {
+const Tables = ({ tableData, coloumnConfig, breakOn, onSortHandler ,onEditHandler,onDeleteHandler,onIdSelectHandler}) => {
       let tableClass = '';
       if (breakOn === 'small') {
             tableClass += 'table-responsive-sm';
@@ -27,7 +28,7 @@ const Tables = ({ tableData, coloumnConfig, breakOn, onSortHandler ,onEditHandle
     return (
       <Table className={tableClass}>
            <Theads coloumnConfig={coloumnConfig} onSortHandler={(col, action)=>onSortHandler(col, action)}/>
-           <Tbodys tableData={tableData} coloumnConfig={coloumnConfig} onEditHandler={onEditHandler} onDeleteHandler={onDeleteHandler}/>
+           <Tbodys tableData={tableData} coloumnConfig={coloumnConfig} onEditHandler={onEditHandler} onDeleteHandler={onDeleteHandler} onIdSelectHandler={onIdSelectHandler}/>
       </Table>
       );
 };

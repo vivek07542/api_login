@@ -7,23 +7,20 @@ import { putRequest } from "../../services/putRequest";
 import { deleteRequest } from "../../services/deleteRequest";
 import { getByIdRequest } from "../../services/getByIdRequest";
 import { responseFunction } from "../../../common/Helpers/responseFunction";
-import { igniteAPI, subscriptionKey } from "../../../common/constants/Constants";
+import { igniteAPI, igniteAPIBYID,subscriptionKey } from "../../../common/constants/Constants";
 import { decryptFunction } from "../../../common/Helpers/crypt_decryptFunction";
 
 export function* initIgniteHandlerSaga(action) {
-    const { pageNumber, searchQuery, sortDirection, sortExpression, limit } = action.pageDetail
+    const { pageNumber,  limit } = action.pageDetail
     let decryptToken = JSON.parse(localStorage.getItem("token"));
     let token = decryptFunction(decryptToken);
     if(token === null){
        token = {}
     }
     else {
-        console.log(token);
-        // let url =  `${igniteAPI}?type=get-all&page=${pageNumber}&limit=${limit}&sort=${sortExpression}&sortType=${sortDirection}&searchText=${searchQuery}`
-        let url = igniteAPI
+        let url =  `${igniteAPI}?type=get-all`
         try {
             const { data } = yield call(getRequest,url,token.auth_token,subscriptionKey)
-            console.log(data);
             yield put(igniteAction.initilizeIgniteSuccess(data,pageNumber,limit));
         }
         catch (error) {
@@ -36,7 +33,7 @@ export function* postIgniteHandlerSaga(action) {
     const { name, type, status, description, subType, updatedAt, owner, tags,value } = { ...action.pageDetail }
     let decryptToken = JSON.parse(localStorage.getItem("token"));
     let token = decryptFunction(decryptToken);
-    let url = `${igniteAPI}`
+    let url = `${igniteAPI}?type=get-all`
     let body = {name:name,type:type,subType: subType,description:description,status: status,updatedAt:updatedAt,owner:owner,tags: tags,value:value}
     try {
         const  response = yield call(postRequest, url,token.auth_token, subscriptionKey, body);

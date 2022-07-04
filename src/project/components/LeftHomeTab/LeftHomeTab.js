@@ -8,12 +8,6 @@ const LeftHomeTab = ({getAllHandler}) => {
         <Button type="button" className="draft-blue-homeForm draft-homeForm" onClick={getAllHandler}>
           get All
         </Button>
-        <Button type="button" className="draft-homeForm">
-          By Clients
-        </Button>
-        <Button type="button" className="draft-green-homeForm draft-homeForm">
-          By Data
-        </Button>
       </div>
     </div>
   );

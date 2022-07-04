@@ -21,6 +21,7 @@ thead th {
 td {
       padding: 0 !important;
       justify-content: center;
+      border:1px solid lightgray
 }
 
 td,
@@ -30,8 +31,12 @@ th {
 }
 
 tr {
-      font-size: 10px;
+      font-size: 14px;
       margin: 5px 0;
+      
+}
+tr:hover{
+      background-color: whitesmoke;
 }
 .table-body--tr {
       height: auto !important;

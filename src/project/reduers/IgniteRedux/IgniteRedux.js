@@ -21,14 +21,15 @@ export const initilizeIgniteInit = (pageDetail) => {
     }
 }
 export const initilizeIgniteSuccess = (tableObject, currentPage, limit) => {
+    
     return{
         type : IGINTE_SUCCESS,
-        tableData: tableObject.data.data,
-        totalPage: Math.ceil(tableObject.data.totalDocs / limit),
+        tableData: tableObject,
         currentPage: currentPage,
         limit: limit,
         loading: false,
-        requestProcessed:false
+        requestProcessed:false,
+        editMode: false,
     }
 }
 export const postIgniteInit = (pageDetail,state) => {
@@ -77,7 +78,7 @@ export const getByIdIgniteInit = (id,editMode) => {
 export const getByIdIgniteSuccess = (editObject,action) => {
     return{
         type : IGNITE_GETBYID_SUCCESS,
-        editObject: editObject.data,
+        editObject: editObject,
         editMode: action.editMode,
         loading:false
     }
@@ -103,7 +104,7 @@ const initialState = {
     currentPage: 1,
     limit: 5,
     editMode: false,
-    editObject: {},
+    editObject: [],
     loading: false,
     requestProcessed: false,
     requestError : false
@@ -123,7 +124,8 @@ const Ignite = (state = initialState,action) =>{
             currentPage: action.currentPage,
             limit: action.limit,
             loading: action.loading,
-            requestProcessed:action.requestProcessed
+            requestProcessed:action.requestProcessed,
+            editMode: action.editMode,
             }
         case IGNITE_POST_SUCCESS:
             return {

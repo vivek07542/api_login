@@ -2,12 +2,12 @@ import React,{useState} from 'react'
 import PropTypes from "prop-types";
 import { Tr } from 'react-super-responsive-table';
 
-import Modal from "../../../../common/components/Modal/Modal";
+// import Modal from "../../../../common/components/Modal/Modal";
 
 import Ths from "./Ths";
 import Tds from "./Tds";
 
-const Trs = ({ coloumnConfig, onSortHandler, isTableHead, eachTableData,onEditHandler,onDeleteHandler }) => {
+const Trs = ({ coloumnConfig, onSortHandler, isTableHead, eachTableData,onEditHandler,onDeleteHandler,onIdSelectHandler }) => {
     const [ascActive, isAscActive] = useState({
         dataColoumn: "",
         active : false
@@ -16,7 +16,7 @@ const Trs = ({ coloumnConfig, onSortHandler, isTableHead, eachTableData,onEditHa
         dataColoumn: "",
         active:false
     });
-    const [active, setActive] = useState(false);
+    // const [active, setActive] = useState(false);
 
     const activeSortHandler = (col, action) => {
         if (action === "asc") {
@@ -41,9 +41,9 @@ const Trs = ({ coloumnConfig, onSortHandler, isTableHead, eachTableData,onEditHa
         }
        
     }
-    const clickHandler = () => {
-        setActive(!active);
-     } 
+    // const clickHandler = () => {
+    //     setActive(!active);
+    //  } 
     let generateTd = coloumnConfig.map((col, index) => (
             isTableHead ?
             <Ths key={index} eachColoumnConfig={col} ascActive={ascActive} descActive={descActive} onSortHandler={(col, action) => { onSortHandler(col, action);activeSortHandler(col,action)}}/>
@@ -53,14 +53,19 @@ const Trs = ({ coloumnConfig, onSortHandler, isTableHead, eachTableData,onEditHa
       
     return (
         // onDoubleClick={clickHandler}
+            !isTableHead ? 
+             <Tr className="col" onClick={()=>onIdSelectHandler(eachTableData.id)}>
+            {generateTd}
+            
+        </Tr> :
         <Tr className="col" >
             {generateTd}
-            {/* {!isTableHead && <Modal show={active} modelClosed={clickHandler}>
-            </Modal>} */}
+        
         </Tr>
             
     )
 }
+
 Trs.propTypes = {
     /**
      * Will Define the Weather Thead is there or not

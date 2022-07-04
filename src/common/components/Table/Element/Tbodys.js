@@ -5,11 +5,11 @@ import { Tbody } from 'react-super-responsive-table';
 import Trs from "./Trs";
 
 
-const Tbodys = ({ tableData, coloumnConfig,onEditHandler,onDeleteHandler }) => {
+const Tbodys = ({ tableData, coloumnConfig,onEditHandler,onDeleteHandler,onIdSelectHandler }) => {
     return (
             <Tbody>
                 {tableData.map((person, index) => (
-                       <Trs key={person._id} isTableHead={false} eachTableData={person} coloumnConfig={coloumnConfig} onEditHandler={onEditHandler} onDeleteHandler={onDeleteHandler}/> 
+                       <Trs key={index} isTableHead={false} eachTableData={person} coloumnConfig={coloumnConfig} onIdSelectHandler={onIdSelectHandler} onEditHandler={onEditHandler} onDeleteHandler={onDeleteHandler}/> 
                 ))}
             </Tbody> 
     )
