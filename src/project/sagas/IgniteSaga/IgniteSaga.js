@@ -18,9 +18,12 @@ export function* initIgniteHandlerSaga(action) {
        token = {}
     }
     else {
-        let url =  `${igniteAPI}?type=get-all&page=${pageNumber}&limit=${limit}&sort=${sortExpression}&sortType=${sortDirection}&searchText=${searchQuery}`
+        console.log(token);
+        // let url =  `${igniteAPI}?type=get-all&page=${pageNumber}&limit=${limit}&sort=${sortExpression}&sortType=${sortDirection}&searchText=${searchQuery}`
+        let url = igniteAPI
         try {
             const { data } = yield call(getRequest,url,token.auth_token,subscriptionKey)
+            console.log(data);
             yield put(igniteAction.initilizeIgniteSuccess(data,pageNumber,limit));
         }
         catch (error) {

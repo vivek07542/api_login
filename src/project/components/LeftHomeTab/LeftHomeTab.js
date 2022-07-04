@@ -1,12 +1,12 @@
 import React from "react";
 import "./LeftHomeTab.css";
 import Button from "../../../common/components/Button/Button";
-const LeftHomeTab = () => {
+const LeftHomeTab = ({getAllHandler}) => {
   return (
     <div className="col-2 leftSide-container-partition">
       <div className="form-button-container">
-        <Button type="button" className="draft-blue-homeForm draft-homeForm">
-          By Products
+        <Button type="button" className="draft-blue-homeForm draft-homeForm" onClick={getAllHandler}>
+          get All
         </Button>
         <Button type="button" className="draft-homeForm">
           By Clients

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./RightHomeTab.css";
-const RightHomeTab = () => {
+const RightHomeTab = ({children}) => {
   return (
     <div className="col-10 rightSide-container-partition">
-    RightHomeTab
+      {children}
     </div>
   )
 }
