@@ -6,15 +6,16 @@ import Footer from "../../../common/components/Footer/Footer";
 import Body from "../../../common/components/Body/Body";
 import LeftHomeTab from "../../components/LeftHomeTab/LeftHomeTab";
 import RightHomeTab from "../../components/RightHomeTab/RightHomeTab";
-
+import CustomerDetail from "../../components/RightHomeTab/CustomerDetail";
 import * as action from "../../reduers/IgniteRedux/IgniteRedux";
 
 import Tables from "../../../common/components/Table/Tables";
 
 import Spinner from "../../../common/components/Spinner/Spinner";
-import Heading from "../../../common/components/Heading/Heading";
-
+// import Heading from "../../../common/components/Heading/Heading";
+import Jumbotron from "../../../common/components/Jumbotron/Jumbotron";
 import { coloumnConfig } from "./Config";
+
 const Home = () => {
   const [state] = useState({
     pageNumber: 1,
@@ -29,7 +30,7 @@ const Home = () => {
   const editObject = useSelector((state) => state.Ignite.editObject);
   const editObjectMode = useSelector((state) => state.Ignite.editMode);
   const loading = useSelector((state) => state.Ignite.loading);
-  
+ 
   const getAllHandler = () => {
     dispatch(action.initilizeIgniteInit(state));
   };
@@ -37,7 +38,11 @@ const Home = () => {
   const onIdSelectHandler = (id) => {
     dispatch(action.getByIdIgniteInit(id, true));
   };
-
+  let customerDetails = editObject.map((e,i) => {
+    return(
+      <CustomerDetail detail={e} key={i}/>
+    )
+  })
   return (
     <div>
       <Header />
@@ -48,23 +53,17 @@ const Home = () => {
             <RightHomeTab>
               {tableData.length !== 0 && !editObjectMode && (
                 <>
-                  <Heading>All Details</Heading>
-                  <Tables
+                 <Jumbotron title="Customers List" children = {<Tables
                     tableData={tableData}
                     coloumnConfig={coloumnConfig}
                     breakOn={"large"}
                     onIdSelectHandler={(id) => onIdSelectHandler(id)}
-                  />
+                  />}/>
                 </>
               )}
               {editObjectMode && (
                 <>
-                  <Heading>By ID</Heading>
-                  <Tables
-                    tableData={editObject}
-                    coloumnConfig={coloumnConfig}
-                    breakOn={"large"}
-                  />
+                  <Jumbotron title="Customer Detail" children = {customerDetails}/>
                 </>
               )}
             </RightHomeTab>

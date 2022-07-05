@@ -1,9 +1,19 @@
 .getDetailButton{
     font-size: 14px;
     margin-top:40px;
+    background-color: white;
+    color:#0a416e;
+    font-weight: 500 !important;
+}
+.getDetailButton:hover{
+    background-color: white;
+    color: rgb(61,2,94);
+    box-shadow: 0.5px 0.5px 3px grey;
+    border: 1px solid rgb(12,70,116);
+    font-weight: 550;
 }
 .leftSide-container-partition{
-    border-right:1px solid lightgray;
+    /* border-right:1px solid lightgray; */
     text-align: center;
     background-color: transparent
 }

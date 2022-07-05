@@ -2,3 +2,19 @@
     text-align: center;
     background-color: transparent
 }
+.customer-detail-container p{
+    text-align: left;
+    color:rgb(10,65,110);
+}
+.customer-detail-container p span{
+    color:black;
+    font-weight: 500;
+}
+.customer-detail-container{
+    border:1px solid rgb(10,65,110);
+    border-radius: 10px;
+    box-shadow: 3px 2px 5px grey;
+    width:60%;
+    padding-left:10px;
+    margin:0 auto;
+}

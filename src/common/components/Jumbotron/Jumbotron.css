@@ -8,12 +8,13 @@
       margin: 30px auto 0px !important;
 }
 .jumbotron-heading {
-      font-size: 20px;
+      font-size: 25px;
+      color: rgb(10,65,110);;
 }
 .jumbotron-form-container {
       height: auto;
       padding: 0 15px;
-      width: 45%;
+    
 }
 @media screen and (max-width: 600px) {
       .jumbotron-form-container {

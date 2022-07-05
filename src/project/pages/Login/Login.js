@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Login.css";
-
+import Heading from '../../../common/components/Heading/Heading';
 import Button from "../../../common/components/Button/Button";
 import HyperLink from '../../../common/components/HyperLink/HyperLink';
 import Header from '../../../common/components/Header/Header';
@@ -10,8 +10,8 @@ const Login = () => {
     const loginHandler = async () => {
         try {
             // window.location.href = 'https://52.172.249.83:3000/login';
-            window.location.href = 'https://43.204.148.213:4000/auth/signin';
-            // window.location.href = 'https://localhost:4000/auth/signin';
+            // window.location.href = 'https://43.204.148.213:4000/auth/signin';
+            window.location.href = 'https://localhost:4000/auth/signin';
             // window.location.href = 'https://localhost:4000/';
             // <Link to="/redirect"/>
         }
@@ -22,6 +22,8 @@ const Login = () => {
     return (
         <div className="login-screen--color">
             <Header/>
+            <Heading className='heading-login'>Sample Client WebApp</Heading>
+            <h6 className='sub-heading-login'>Using Azure AD-PKCE and Azure APIM</h6>
             <div className="container login-form--container text-center ">
                 <div className="fluid-container mb-4">
                     <Button type="button" className="login-button--color" onClick={() =>loginHandler() }>Login Page</Button>

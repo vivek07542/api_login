@@ -21,16 +21,27 @@ export const coloumnConfig = [
         linkTo: "null",
         sortExpression: "",
     },
+    // {   
+    //     coloumnName: "First Name",
+    //     coloumnType: "regular",
+    //     className : "col-md-2 col-12 text-break ",
+    //     dataColoumn: "firstName",
+    //     color: "#555",
+    //     backgroundColor: "white",
+    //     fontSize: "20px",
+    //     linkTo: "null",
+    //     sortExpression: "",
+    // },
     
-       {
-        coloumnName: "Phone Number",
-        coloumnType: "regular",
-        className : "col-md-2 col-12",
-        dataColoumn: "Phone",
-        color: "#555",
-        fontSize: "20px",
-        backgroundColor: "",
-        linkTo: "null",
-        sortExpression: "",
-    }
+    //    {
+    //     coloumnName: "Last Name",
+    //     coloumnType: "regular",
+    //     className : "col-md-2 col-12",
+    //     dataColoumn: "lastName",
+    //     color: "#555",
+    //     fontSize: "20px",
+    //     backgroundColor: "",
+    //     linkTo: "null",
+    //     sortExpression: "",
+    // }
 ]

@@ -98,3 +98,35 @@ export const createEnrolment = [
         type:"-"
     }
 ]
+export const customers = [
+    {
+        id:1,
+        firstName:"John",
+        lastName:"Smith",
+        address:"Hemilton Tower",
+        email:"john@gmail.com",
+        phone:9988224351
+    },
+    {
+        id:2,
+        firstName:"Avni",
+        lastName:"Gold",
+        address:"Times Square",
+        email:"avni@gmail.com",
+        phone:9988222567
+    },    {
+        id:3,
+        firstName:"Richard",
+        lastName:"Calf",
+        address:"Estate Road",
+        email:"Calf@gmail.com",
+        phone:99343524351
+    },    {
+        id:4,
+        firstName:"Alice",
+        lastName:"Paul",
+        address:"Texas",
+        email:"paul@gmail.com",
+        phone:9923424351
+    }
+]

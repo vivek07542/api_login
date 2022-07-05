@@ -25,6 +25,9 @@ const Routing = () => {
         let cryptToken = cryptFunction(token);
         localStorage.setItem("token",JSON.stringify(cryptToken));
     }
+    // let decryptToken = JSON.parse(localStorage.getItem("token"));
+    // let token = decryptFunction(decryptToken);
+
     let routes = (authToken === null && refreshToken === null) ?
         (<Routes>
             <Route path="/redirect/:accessToken/:refreshToken" element={<RiderctLanding checkAuth={(auth,refresh)=>checkAuth(auth,refresh)}/>}/>
@@ -33,7 +36,7 @@ const Routing = () => {
         </Routes>)
         :
         (<Routes>
-            <Route path="/login" element={<Login />} />
+            {/* <Route path="/login" element={<Login />} /> */}
             <Route path="/" element={
                 <Suspense fallback={<Spinner/>}>
                     <Home />

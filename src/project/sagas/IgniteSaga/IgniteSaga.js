@@ -1,13 +1,13 @@
 import {put,call} from "redux-saga/effects";
 import * as igniteAction from "../../reduers/IgniteRedux/IgniteRedux";
-// import { persons} from "../Mock/Mock";
+// import { customers} from "../Mock/Mock";
 import { getRequest } from "../../services/getRequest";
 import { postRequest } from "../../services/postRequest";
 import { putRequest } from "../../services/putRequest";
 import { deleteRequest } from "../../services/deleteRequest";
 import { getByIdRequest } from "../../services/getByIdRequest";
 import { responseFunction } from "../../../common/Helpers/responseFunction";
-import { igniteAPI, igniteAPIBYID,subscriptionKey } from "../../../common/constants/Constants";
+import { igniteAPI,subscriptionKey } from "../../../common/constants/Constants";
 import { decryptFunction } from "../../../common/Helpers/crypt_decryptFunction";
 
 export function* initIgniteHandlerSaga(action) {
@@ -21,7 +21,10 @@ export function* initIgniteHandlerSaga(action) {
         let url =  `${igniteAPI}?type=get-all`
         try {
             const { data } = yield call(getRequest,url,token.auth_token,subscriptionKey)
+           
             yield put(igniteAction.initilizeIgniteSuccess(data,pageNumber,limit));
+            // yield put(igniteAction.initilizeIgniteSuccess(customers,pageNumber,limit));
+
         }
         catch (error) {
             console.error(error);
