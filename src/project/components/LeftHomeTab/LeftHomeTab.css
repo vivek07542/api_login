@@ -1,6 +1,11 @@
+.getDetailButton{
+    font-size: 14px;
+    margin-top:40px;
+}
 .leftSide-container-partition{
     border-right:1px solid lightgray;
     text-align: center;
+    background-color: whitesmoke;
 }
 .form-button-container {
     height:250px;

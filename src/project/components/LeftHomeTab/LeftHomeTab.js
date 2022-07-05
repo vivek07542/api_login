@@ -5,7 +5,7 @@ const LeftHomeTab = ({getAllHandler}) => {
   return (
     <div className="col-2 leftSide-container-partition">
       <div className="form-button-container">
-        <Button type="button" className="draft-blue-homeForm draft-homeForm" onClick={getAllHandler}>
+        <Button type="button" className="getDetailButton" onClick={getAllHandler}>
           get All
         </Button>
       </div>

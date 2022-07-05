@@ -16,7 +16,7 @@ const Header = ({onClick}) => {
            
                 <div className="col-1">
                     <a className="navbar-brand" href="/#">
-                        <img src={logo} width="50" height="40" alt=""/>
+                        <img src={logo} width="80" height="40" alt=""/>
                     </a>
                 </div>
                 

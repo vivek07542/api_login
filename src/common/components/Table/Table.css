@@ -1,11 +1,17 @@
 .table-container {
       /* mim-width: 577px; */
       width: 100%;
+
 }
 .table-container__table {
       width: 100%;
       border-collapse: collapse;
+
 }
+table{
+background-color: white;
+}
+
 thead {
       background-color: rgb(245, 246, 250);
       border: 1px solid rgba(225, 225, 225, 0.7);
@@ -13,6 +19,10 @@ thead {
       padding-bottom: 10px !important;
       height: 50px;
       color: black;
+}
+thead tr:hover{
+      background-color: rgb(245, 246, 250) !important;
+      border: 1px solid rgba(225, 225, 225, 0.7);
 }
 thead th {
       padding-bottom: 15px !important;
@@ -36,8 +46,9 @@ tr {
       
 }
 tr:hover{
-      background-color: whitesmoke;
+      background-color: rgba(207, 207, 207, 0.479);
 }
+
 .table-body--tr {
       height: auto !important;
       width: auto;
