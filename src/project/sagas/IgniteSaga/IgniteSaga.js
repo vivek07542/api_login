@@ -83,6 +83,7 @@ export function* getByIdIgniteHandlerSaga(action) {
     let url = `${igniteAPI}?type=get-by-id&id=${action.id}`
     try {
         const { data } = yield call(getByIdRequest,url,token.auth_token,subscriptionKey)
+
         yield put(igniteAction.getByIdIgniteSuccess(data, action));
     }
     catch (error) {
