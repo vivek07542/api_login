@@ -4,14 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 import Header from "../../../common/components/Header/Header";
 import Footer from "../../../common/components/Footer/Footer";
 import Body from "../../../common/components/Body/Body";
-// import SideNav from '../../../common/components/SideNav/SideNav';
 import LeftHomeTab from "../../components/LeftHomeTab/LeftHomeTab";
 import RightHomeTab from "../../components/RightHomeTab/RightHomeTab";
 
 import * as action from "../../reduers/IgniteRedux/IgniteRedux";
 
 import Tables from "../../../common/components/Table/Tables";
-// import Pagination from '../../../common/components/Pagination/Pagination';
 
 import Spinner from "../../../common/components/Spinner/Spinner";
 import Heading from "../../../common/components/Heading/Heading";
@@ -72,7 +70,6 @@ const Home = () => {
             </RightHomeTab>
           </Body>
           {loading && <Spinner loading={true} />}
-
           <Footer />
         </div>
       </div>

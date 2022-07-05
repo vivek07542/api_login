@@ -11,8 +11,6 @@ import Spinner from '../../common/components/Spinner/Spinner';
 
 import {cryptFunction} from "../../common/Helpers/crypt_decryptFunction"
 
-
-
 const Routing = () => {
     const [authToken, setAuthToken] = useState(null);
     const [refreshToken, setRefreshToken] = useState(null);
@@ -36,7 +34,6 @@ const Routing = () => {
         :
         (<Routes>
             <Route path="/login" element={<Login />} />
-         
             <Route path="/" element={
                 <Suspense fallback={<Spinner/>}>
                     <Home />

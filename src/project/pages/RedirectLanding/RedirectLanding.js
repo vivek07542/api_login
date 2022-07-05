@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 
 const RedirectLanding = (props) => {
     const { accessToken, refreshToken } = useParams();
-
    
     useEffect(() => {
        props.checkAuth(accessToken,refreshToken);

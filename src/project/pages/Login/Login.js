@@ -3,7 +3,8 @@ import "./Login.css";
 
 import Button from "../../../common/components/Button/Button";
 import HyperLink from '../../../common/components/HyperLink/HyperLink';
-import { Link } from "react-router-dom";
+import Header from '../../../common/components/Header/Header';
+// import { Link } from "react-router-dom";
 
 const Login = () => {
     const loginHandler = async () => {
@@ -20,6 +21,7 @@ const Login = () => {
     }
     return (
         <div className="login-screen--color">
+            <Header/>
             <div className="container login-form--container text-center ">
                 <div className="fluid-container mb-4">
                     <Button type="button" className="login-button--color" onClick={() =>loginHandler() }>Login Page</Button>

@@ -17,9 +17,3 @@ ReactDOM.render(
   ,
   rootEl)
 
-// if (module.hot) {
-//   module.hot.accept('./App', function () {
-//     var NextApp = require('./App')
-//     ReactDOM.render(<NextApp />, rootEl)
-//   })
-// }
