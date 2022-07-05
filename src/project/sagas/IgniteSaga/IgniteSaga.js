@@ -1,6 +1,6 @@
 import {put,call} from "redux-saga/effects";
 import * as igniteAction from "../../reduers/IgniteRedux/IgniteRedux";
-// import { customers} from "../Mock/Mock";
+import { customers} from "../Mock/Mock";
 import { getRequest } from "../../services/getRequest";
 import { postRequest } from "../../services/postRequest";
 import { putRequest } from "../../services/putRequest";

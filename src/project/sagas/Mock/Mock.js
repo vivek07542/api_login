@@ -101,32 +101,54 @@ export const createEnrolment = [
 export const customers = [
     {
         id:1,
-        firstName:"John",
-        lastName:"Smith",
-        address:"Hemilton Tower",
-        email:"john@gmail.com",
-        phone:9988224351
+        FirstName:"John",
+        LastName:"Smith",
+        Address:"Hemilton Tower",
+        Email:"john@gmail.com",
+        Phone:9988224351
     },
     {
         id:2,
-        firstName:"Avni",
-        lastName:"Gold",
-        address:"Times Square",
-        email:"avni@gmail.com",
-        phone:9988222567
+        FirstName:"Avni",
+        LastName:"Gold",
+        Address:"Times Square",
+        Email:"avni@gmail.com",
+        Phone:9988222567
     },    {
         id:3,
-        firstName:"Richard",
-        lastName:"Calf",
-        address:"Estate Road",
-        email:"Calf@gmail.com",
-        phone:99343524351
+        FirstName:"Richard",
+        LastName:"Calf",
+        Address:"Estate Road",
+        Email:"Calf@gmail.com",
+        Phone:99343524351
     },    {
         id:4,
-        firstName:"Alice",
-        lastName:"Paul",
-        address:"Texas",
-        email:"paul@gmail.com",
-        phone:9923424351
+        FirstName:"Alice",
+        LastName:"Paul",
+        Address:"Texas",
+        Email:"paul@gmail.com",
+        Phone:9923424351
+    }
+    ,    {
+        id:5,
+        FirstName:"Alice",
+        LastName:"Paul",
+        Address:"Texas",
+        Email:"paul@gmail.com",
+        Phone:9923424351
+    },    {
+        id:6,
+        FirstName:"Alice",
+        LastName:"Paul",
+        Address:"Texas",
+        Email:"paul@gmail.com",
+        Phone:9923424351
+    },    {
+        id:7,
+        FirstName:"Alice",
+        LastName:"Paul",
+        Address:"Texas",
+        Email:"paul@gmail.com",
+        Phone:9923424351
     }
 ]
