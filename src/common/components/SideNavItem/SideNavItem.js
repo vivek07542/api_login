@@ -1,14 +1,18 @@
 import React from 'react'
 import PropTypes from "prop-types";
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import "./SideNavItem.css";
 
 const SideNavItem = (props) => {
+    const toggler = useSelector((state) => state.HamBurger.hamToggler);
     const { className,path,children, ...allProps } = {...props};
   
     let classNameProp = ["col-12 sideNav-icon--container"];
-    if (className) {
-      classNameProp.push(className);
+    if (className||toggler){
+        classNameProp.pop();
+        classNameProp.push("nav-icon--text");
+        classNameProp.push(className);
     }
     let assignedClass = classNameProp.join(" ");
     return (

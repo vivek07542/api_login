@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
  * Create A User Icon on the page which will show th name with different color pattern
  */
 const UserIcon = (props) => {
-    const { className,color,children, ...allProps } = {...props};
-  
+  const { className,color,children, ...allProps } = {...props};
   let classNameProp = ["userIcon-container-shape "];
   if (className) {
     classNameProp.push(className);
@@ -18,19 +17,17 @@ const UserIcon = (props) => {
   '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
   '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
   '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
-  '#66994D', '#B366CC', '#4D8000', '#B33300', '#CC80CC', 
+  '#66994D', '#4D8000','#B366CC',  '#B33300', '#CC80CC', 
   '#66664D']
   const validateLetterColor = checkLetterColor(upperCaseInitial,colorScheme);
-
     return (
         <div className={assignedClass} style={{ backgroundColor: validateLetterColor }} {...allProps}>
              {upperCaseInitial}
         </div>   
-        
     )
 }
 UserIcon.propTypes = {
-        /**
+   /**
    * Any Further style can be added to the component apart from regualar class this will give extra styling to the page.
    */
   className : PropTypes.string,
@@ -53,6 +50,7 @@ export default UserIcon
  * @param {Color Array defined above} color 
  * @returns The Color for particular Letter
  */
+// Function For Matching Words With Color
 const checkLetterColor = (alphabet, color) => {
  let lowerCase = alphabet.toLowerCase();
   for (let i = 0; i < 26; i++) {
@@ -61,4 +59,9 @@ const checkLetterColor = (alphabet, color) => {
       return color[i];
     }
   }
+}
+// Random Color From Color Array
+const checkRandomColor = (alphabet, color) =>{
+  let lowerCase = alphabet.toLowerCase();
+  return color[Math.floor(Math.random() * color.length)];
 }

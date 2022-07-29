@@ -4,3 +4,9 @@
       height: auto;
       box-shadow: 1px 1px 4px grey;
 }
+.sideNav-open-container{
+      width:250px;
+      min-height: 91.8vh;
+      height: auto;
+      box-shadow: 1px 1px 4px grey;
+}

@@ -24,7 +24,6 @@ const Tables = ({ tableData, coloumnConfig, breakOn, onSortHandler ,onEditHandle
       } else if (breakOn === 'large') {
             tableClass += 'table-responsive-lg';
       }
-
     return (
       <Table className={tableClass}>
            <Theads coloumnConfig={coloumnConfig} onSortHandler={(col, action)=>onSortHandler(col, action)}/>

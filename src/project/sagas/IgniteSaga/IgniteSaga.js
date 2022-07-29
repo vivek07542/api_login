@@ -88,6 +88,8 @@ export function* getByIdIgniteHandlerSaga(action) {
         const { data } = yield call(getByIdRequest,url,token.auth_token,subscriptionKey)
 
         yield put(igniteAction.getByIdIgniteSuccess(data, action));
+        // yield put(igniteAction.getByIdIgniteSuccess([customers[2]], action));
+
     }
     catch (error) {
         console.error(error);

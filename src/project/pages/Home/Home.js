@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState,useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import Header from "../../../common/components/Header/Header";
@@ -10,7 +11,7 @@ import CustomerDetail from "../../components/RightHomeTab/CustomerDetail";
 import * as action from "../../reduers/IgniteRedux/IgniteRedux";
 
 import Tables from "../../../common/components/Table/Tables";
-
+import SideNav from "../../../common/components/SideNav/SideNav"
 import Spinner from "../../../common/components/Spinner/Spinner";
 // import Heading from "../../../common/components/Heading/Heading";
 import Jumbotron from "../../../common/components/Jumbotron/Jumbotron";
@@ -25,7 +26,6 @@ const Home = () => {
     limit: 5,
   });
   const dispatch = useDispatch();
-
   const tableData = useSelector((state) => state.Ignite.tableData);
   const editObject = useSelector((state) => state.Ignite.editObject);
   const editObjectMode = useSelector((state) => state.Ignite.editMode);
@@ -34,7 +34,10 @@ const Home = () => {
   const getAllHandler = () => {
     dispatch(action.initilizeIgniteInit(state));
   };
-
+  useEffect(() => {
+    getAllHandler()
+  }, [])
+  
   const onIdSelectHandler = (id) => {
     dispatch(action.getByIdIgniteInit(id, true));
   };
@@ -47,26 +50,22 @@ const Home = () => {
     <div>
       <Header />
       <div className="container-flex d-flex">
-        <div className="w-100">
-          <Body className="row mx-auto">
-            <LeftHomeTab getAllHandler={() => getAllHandler()} />
-            <RightHomeTab>
+        <SideNav/>
+        <div className="w-100 ">
+          <Body className="row mx-auto" >
+            {(tableData.length === 0 || editObjectMode) && <LeftHomeTab getAllHandler={() => getAllHandler()} />}
               {tableData.length !== 0 && !editObjectMode && (
-                <>
-                 <Jumbotron title="Customers List" children = {<Tables
-                    tableData={tableData}
-                    coloumnConfig={coloumnConfig}
+                <RightHomeTab layout="12">
+                 <Jumbotron  title="Customers List" children = {<Tables tableData={tableData} coloumnConfig={coloumnConfig}
                     breakOn={"large"}
-                    onIdSelectHandler={(id) => onIdSelectHandler(id)}
-                  />}/>
-                </>
+                    onIdSelectHandler={(id) => onIdSelectHandler(id)}/>}/>
+                </RightHomeTab>
               )}
               {editObjectMode && (
-                <>
+                <RightHomeTab layout="10" >
                   <Jumbotron title="Customer Detail" children = {customerDetails}/>
-                </>
+                </RightHomeTab>
               )}
-            </RightHomeTab>
           </Body>
           {loading && <Spinner loading={true} />}
           <Footer />

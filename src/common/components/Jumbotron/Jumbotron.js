@@ -7,6 +7,7 @@ const Jumbotron = (props) => {
     return (
         <div className='container Jumbotron-container'>
             <h6 className="jumbotron-heading">{title}</h6>
+            <hr/>
             <div className='jumbotron-form-container'>
                 {children}
             </div>

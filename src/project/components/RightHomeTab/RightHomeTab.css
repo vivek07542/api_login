@@ -11,10 +11,29 @@
     font-weight: 500;
 }
 .customer-detail-container{
-    border:1px solid rgb(10,65,110);
-    border-radius: 10px;
-    box-shadow: 3px 2px 5px grey;
-    width:60%;
     padding-left:10px;
-    margin:0 auto;
+    padding-top: 50px;
+}
+.card-img-container{
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    margin:-50px auto -40px;
+    font-weight: 400;
+    color:rgb(10,65,110);
+   position:relative
+}
+.card-img-top{
+    border-radius: 50%;
+}
+.card-id-top{
+    z-index: 100;
+    background-color: white;
+    border-radius: 50%;
+    position:absolute;
+    top:0;
+    right:15px;
+    width:25px;
+    border:1px solid rgb(10,65,110);
+    font-weight: 400;
 }

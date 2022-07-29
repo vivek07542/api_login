@@ -129,26 +129,26 @@ export const customers = [
         Email:"paul@gmail.com",
         Phone:9923424351
     }
-    ,    {
-        id:5,
-        FirstName:"Alice",
-        LastName:"Paul",
-        Address:"Texas",
-        Email:"paul@gmail.com",
-        Phone:9923424351
-    },    {
-        id:6,
-        FirstName:"Alice",
-        LastName:"Paul",
-        Address:"Texas",
-        Email:"paul@gmail.com",
-        Phone:9923424351
-    },    {
-        id:7,
-        FirstName:"Alice",
-        LastName:"Paul",
-        Address:"Texas",
-        Email:"paul@gmail.com",
-        Phone:9923424351
-    }
+    // ,    {
+    //     id:5,
+    //     FirstName:"Alice",
+    //     LastName:"Paul",
+    //     Address:"Texas",
+    //     Email:"paul@gmail.com",
+    //     Phone:9923424351
+    // },    {
+    //     id:6,
+    //     FirstName:"Alice",
+    //     LastName:"Paul",
+    //     Address:"Texas",
+    //     Email:"paul@gmail.com",
+    //     Phone:9923424351
+    // },    {
+    //     id:7,
+    //     FirstName:"Alice",
+    //     LastName:"Paul",
+    //     Address:"Texas",
+    //     Email:"paul@gmail.com",
+    //     Phone:9923424351
+    // }
 ]

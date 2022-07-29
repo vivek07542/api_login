@@ -1,34 +1,28 @@
 import { BiHome, BiFile,BiBarChartAlt2 } from 'react-icons/bi';
-import { RiStethoscopeLine } from 'react-icons/ri';
-import { BsPeople } from 'react-icons/bs';
-import { VscFlame } from "react-icons/vsc";
+import { TbReportSearch } from 'react-icons/tb';
+import { HiOutlineClipboardCheck } from 'react-icons/hi';
+import { AiOutlineDropbox } from "react-icons/ai";
 
 export const sideNavData = [
     {
         icon: <BiHome />,
-        path:"/"
+        path:"/",
+        iconName:"Home"
+
     },
     {
-        icon: <BiFile/>,
-        path:"/program"
+        icon: <AiOutlineDropbox/>,
+        path:"/products",
+        iconName:"Products"
     },
     {
-        icon: <RiStethoscopeLine/> ,
-        path:"/metrics"
+        icon: <HiOutlineClipboardCheck/> ,
+        path:"/orders",
+        iconName:"Orders"
     },
     {
-        icon: <BsPeople/>,
-        path:"/population"
-    },
-    {
-        icon: <BiBarChartAlt2/>,
-        path:"/protocol"
-    },{
-        icon: <VscFlame/>,
-        path:"/ignite"
-    },
-    {
-        icon: <BiFile/>,
-        path:"/create_program"
+        icon: <TbReportSearch/>,
+        path:"/reports",
+        iconName:"Reports"
     }
 ]
