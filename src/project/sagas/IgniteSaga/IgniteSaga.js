@@ -21,13 +21,15 @@ export function* initIgniteHandlerSaga(action) {
         let url =  `${igniteAPI}?type=get-all`
         try {
             const { data } = yield call(getRequest,url,token.auth_token,subscriptionKey)
-           
             yield put(igniteAction.initilizeIgniteSuccess(data,pageNumber,limit));
             // yield put(igniteAction.initilizeIgniteSuccess(customers,pageNumber,limit));
-
         }
         catch (error) {
-            console.error(error);
+            console.log(error.response.status)
+            if(error.response.status === 401){
+               let errors = true;
+                yield put(igniteAction.errorHandlerSuccess(errors));
+            }
         }
     }
 }
@@ -86,12 +88,14 @@ export function* getByIdIgniteHandlerSaga(action) {
     let url = `${igniteAPI}?type=get-by-id&id=${action.id}`
     try {
         const { data } = yield call(getByIdRequest,url,token.auth_token,subscriptionKey)
-
         yield put(igniteAction.getByIdIgniteSuccess(data, action));
         // yield put(igniteAction.getByIdIgniteSuccess([customers[2]], action));
-
     }
     catch (error) {
         console.error(error);
+        if(error.response.status === 401){
+            let errors = true;
+             yield put(igniteAction.errorHandlerSuccess(errors));
+         }
     }
 }

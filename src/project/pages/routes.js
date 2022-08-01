@@ -15,22 +15,34 @@ import Spinner from '../../common/components/Spinner/Spinner';
 import {cryptFunction} from "../../common/Helpers/crypt_decryptFunction"
 import { decryptFunction } from "../../common/Helpers/crypt_decryptFunction";
 
+import { useSelector,useDispatch} from "react-redux";
+import * as action from "../reduers/IgniteRedux/IgniteRedux";
 const Routing = () => {
     const [authToken, setAuthToken] = useState(null);
     const [refreshToken, setRefreshToken] = useState(null); 
+    const errors = useSelector((state) => state.Ignite.errors);
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        if(errors){
+            dispatch(action.errorHandlerInit(errors));
+            setAuthToken(null);
+            setRefreshToken(null);
+            localStorage.clear();
+        }
+    },[errors])
 
-useEffect(() => {
-    let decryptToken = JSON.parse(localStorage.getItem("token"));
-    if(decryptToken !== null){
-        let token = decryptFunction(decryptToken);
-        setAuthToken(token.auth_token);
-        setRefreshToken(token.refresh_token);
-    }
-    else{
-        setAuthToken(null);
-        setRefreshToken(null)
-    }
-}, [])
+    useEffect(() => {
+        let decryptToken = JSON.parse(localStorage.getItem("token"));
+        if(decryptToken !== null){
+            let token = decryptFunction(decryptToken);
+            setAuthToken(token.auth_token);
+            setRefreshToken(token.refresh_token);
+        }
+        else{
+            setAuthToken(null);
+            setRefreshToken(null)
+        }
+    }, [])
     const checkAuth = (auth_token,refresh_token) => {
         setAuthToken(auth_token);
         setRefreshToken(refresh_token);

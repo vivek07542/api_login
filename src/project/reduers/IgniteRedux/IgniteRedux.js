@@ -13,6 +13,10 @@ export const IGNITE_DELETE_SUCCESS = "IGNITE_DELETE_SUCCESS";
 export const IGNITE_GETBYID_INIT = "IGNITE_GETBYID_INIT";
 export const IGNITE_GETBYID_SUCCESS = "IGNITE_GETBYID_SUCCESS"
 
+
+export const ERROR_INIT = "ERROR_INIT";
+export const ERROR_SUCCESS = "ERROR_SUCCESS";
+
 export const initilizeIgniteInit = (pageDetail) => {
     return{
         type: IGNITE_INIT,
@@ -29,7 +33,19 @@ export const initilizeIgniteSuccess = (tableObject, currentPage, limit) => {
         limit: limit,
         loading: false,
         requestProcessed:false,
-        editMode: false,
+        editMode: false
+    }
+}
+export const errorHandlerInit = () =>{
+    return{
+        type:ERROR_INIT,
+        errors:false
+    }
+}
+export const errorHandlerSuccess = (errors) =>{
+    return{
+        type:ERROR_SUCCESS,
+        errors:errors
     }
 }
 export const postIgniteInit = (pageDetail,state) => {
@@ -107,7 +123,8 @@ const initialState = {
     editObject: [],
     loading: false,
     requestProcessed: false,
-    requestError : false
+    requestError : false,
+    errors:false
 }
 const Ignite = (state = initialState,action) =>{
     switch (action.type) {
@@ -125,7 +142,7 @@ const Ignite = (state = initialState,action) =>{
             limit: action.limit,
             loading: action.loading,
             requestProcessed:action.requestProcessed,
-            editMode: action.editMode,
+            editMode: action.editMode
             }
         case IGNITE_POST_SUCCESS:
             return {
@@ -174,6 +191,16 @@ const Ignite = (state = initialState,action) =>{
                 editMode: action.editMode,
                 loading:action.loading
             }
+        case ERROR_SUCCESS:
+            return{
+                ...state,
+                errors:action.errors,
+            }
+        case ERROR_INIT:
+            return{
+                ...state,
+                errors:action.errors
+            }    
        default : return state
     }
 }

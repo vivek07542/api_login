@@ -41,3 +41,7 @@
     border:1px solid rgb(10,65,110);
     font-weight:300;
 }
+.card-link{
+    font-size: 12px;
+    text-decoration: none;
+}
