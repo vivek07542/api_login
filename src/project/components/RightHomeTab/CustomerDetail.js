@@ -1,6 +1,6 @@
 import React from 'react';
 import user from "../../../assets/Images/user-icons.png";
-import UserIcon from '../../../common/components/UserIcon/UserIcon';
+// import UserIcon from '../../../common/components/UserIcon/UserIcon';
 const CustomerDetail = ({detail}) => {
   return (
     <div className="customer-detail-container">

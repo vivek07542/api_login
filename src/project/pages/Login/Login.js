@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import "./Login.css";
 import Heading from '../../../common/components/Heading/Heading';
 import Button from "../../../common/components/Button/Button";
@@ -13,8 +13,8 @@ const Login = () => {
 
     const loginHandler = async () => {
         try {
-            // window.location.href = 'https://43.204.148.213:4000/auth/signin';
-            window.location.href = 'https://localhost:4000/auth/signin';
+            window.location.href = 'https://43.204.148.213:4000/auth/signin';
+            // window.location.href = 'https://localhost:4000/auth/signin';
             // window.location.href = 'https://localhost:4000/';
             // <Link to="/redirect"/>
         }
