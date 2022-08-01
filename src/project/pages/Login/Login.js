@@ -14,10 +14,6 @@ const Login = () => {
     const loginHandler = async () => {
         try {
             window.location.href = 'https://20.38.39.77:4000/auth/signin';
-            // window.location.href = 'https://43.204.148.213:4000/auth/signin';
-            // window.location.href = 'https://localhost:4000/auth/signin';
-            // window.location.href = 'https://localhost:4000/';
-            // <Link to="/redirect"/>
         }
         catch (err) {
             console.log("error");
